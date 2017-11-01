@@ -4,5 +4,5 @@
 ``` shell
 $ make
 $ git co gh-pages
-$ cp -r build/ .
+$ cp -r build/* .
 ```
