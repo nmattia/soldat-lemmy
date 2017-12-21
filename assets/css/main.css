@@ -604,6 +604,10 @@ input, textarea, select {
   font-weight: 300;
   color: #777777; }
 
+iframe {
+  display: block;
+  margin: auto; }
+
 strong, b, h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
   color: #363636; }
