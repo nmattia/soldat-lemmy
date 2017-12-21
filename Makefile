@@ -1,7 +1,7 @@
 SHELL:=/usr/bin/env bash
 PERCENT := %
 
-all: build/music
+all: build/music/
 	mkdir -p build/assets/css
 	cp index.html build/index.html
 	cp -r music build/
@@ -14,8 +14,8 @@ all: build/music
 	sass assets/sass/noscript.scss build/assets/css/noscript.css
 	sass assets/sass/ie8.scss build/assets/css/ie8.css
 
-build/music/demo: music/demo
-	mkdir -p build/music/demo
+build/music/: music/demo
+	cp -r music/ build
 	for f in build/music/demo/*.mp3 ; do ffmpeg -y -i "$${f}" "$${f/${PERCENT}mp3/ogg}"; done
 
 clean :
